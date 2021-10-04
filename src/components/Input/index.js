@@ -3,7 +3,7 @@
 
 import { useDispatch, useSelector } from "react-redux"
 import { useState } from "react"
-import { addCommentThunk } from "./store/modules/user/thunks";
+import  addCommentThunk  from "../../store/modules/user/thunks";
 
 const Input = () => {
 
@@ -25,11 +25,7 @@ const Input = () => {
                 <h3>{user.name}</h3>
             </div>
             <input value={userComment} placeholder="faça um comentário" onChange={e => setUserComment(e.target.value)}/>
-
-    
              <button onClick={() => handleAddComment(userComment)}>Comentário</button>
-     
-            
             <ul>
                 {user.comments.map((item, index) => <li key={index}>{item}</li>)}
             </ul>
